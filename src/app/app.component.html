@@ -6,3 +6,11 @@
     <button *ngIf="todo.done" (click)="markAsUndone(todo)">REDO</button> | 
     <button (click)="remove(todo)">REMOVE</button></li> 
 </ul>
+
+<form [formGroup]="form">
+  <fieldset>
+    <label>Task</label>
+    <input type="text">
+    <button>Save</button>
+  </fieldset>
+</form>
