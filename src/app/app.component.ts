@@ -9,14 +9,14 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class AppComponent {
   public todos: Todo[] = [];
-  title = 'My tasks';
+  public title: String  = 'My tasks';
   public form: FormGroup;
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
-      title: ['', Validators(compose([
-        Validators.minLength(11),
-        Validators.maxLength(11),
+      title: ['', Validators.compose([
+        Validators.minLength(3),
+        Validators.maxLength(60),
         Validators.required
       ])]
     });
