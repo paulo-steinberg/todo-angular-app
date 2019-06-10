@@ -9,7 +9,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class AppComponent {
   public todos: Todo[] = [];
-  public title: String  = 'My tasks';
+  public title: string  = 'My tasks';
   public form: FormGroup;
 
   constructor(private fb: FormBuilder) {
